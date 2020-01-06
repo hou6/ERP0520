@@ -16,7 +16,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * @author houliu
@@ -61,6 +63,35 @@ public class UserController {
         }
 
         return new DataGridView(page.getTotal(),userList);
+    }
+
+    /**
+     * 加载最大的排序码
+     * @return
+     */
+    @RequestMapping("loadUserMaxOrderNum")
+    public Map<String,Object> loadUserMaxOrderNum(){
+        Map<String,Object> map = new HashMap<>();
+        QueryWrapper<User> queryWrapper = new QueryWrapper<>();
+        queryWrapper.orderByDesc("ordernum");
+        IPage<User> page = new Page<>(1, 1);
+        List<User> list = this.userService.page(page,queryWrapper).getRecords();
+        if (list.size()>0) {
+            map.put("value",list.get(0).getOrdernum() + 1);
+        }else {
+            map.put("value",1);
+        }
+        return map;
+    }
+
+    @RequestMapping("loadUsersByDeptId")
+    public DataGridView loadUsersByDeptId(Integer deptid){
+        QueryWrapper<User> queryWrapper = new QueryWrapper<>();
+        queryWrapper.eq("deptid",deptid);
+        queryWrapper.eq("available",Constast.AVALIABLE_TRUE);
+        queryWrapper.eq("type",Constast.USER_TYPE_NORMAL);
+        List<User> userList = this.userService.list(queryWrapper);
+        return new DataGridView(userList);
     }
 
 }
