@@ -5,29 +5,16 @@
       <change afterPath="$PROJECT_DIR$/../crud/mvnw" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../crud/mvnw.cmd" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/houliu/sys/cache/CacheAspect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/houliu/sys/cache/CacheAspect.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/houliu/sys/common/Constast.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/houliu/sys/common/Constast.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/houliu/sys/common/DataGridView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/houliu/sys/common/DataGridView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/houliu/sys/controller/RoleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/houliu/sys/controller/RoleController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/houliu/sys/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/houliu/sys/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/houliu/sys/mapper/RoleMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/houliu/sys/mapper/RoleMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/houliu/sys/service/IRoleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/houliu/sys/service/IRoleService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/houliu/sys/service/IUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/houliu/sys/service/IUserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/houliu/sys/service/impl/RoleServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/houliu/sys/service/impl/RoleServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/houliu/sys/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/houliu/sys/service/impl/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/sys/RoleMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/sys/RoleMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/houliu/sys/controller/MenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/houliu/sys/controller/MenuController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/houliu/sys/realm/UserRealm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/houliu/sys/realm/UserRealm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/system/dept/deptRight.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/system/dept/deptRight.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/system/loginfo/loginfoManager.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/system/loginfo/loginfoManager.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/system/menu/menuRight.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/system/menu/menuRight.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/system/permission/permissionRight.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/system/permission/permissionRight.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/system/role/roleManager.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/system/role/roleManager.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/system/user/userManager.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/system/user/userManager.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/houliu/sys/cache/CacheAspect.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/houliu/sys/cache/CacheAspect.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/houliu/sys/common/Constast.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/houliu/sys/common/Constast.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/houliu/sys/common/DataGridView.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/houliu/sys/common/DataGridView.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/houliu/sys/controller/RoleController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/houliu/sys/controller/RoleController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/houliu/sys/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/houliu/sys/controller/UserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/houliu/sys/mapper/RoleMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/houliu/sys/mapper/RoleMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/houliu/sys/service/IRoleService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/houliu/sys/service/IRoleService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/houliu/sys/service/impl/RoleServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/houliu/sys/service/impl/RoleServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/houliu/sys/service/impl/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/houliu/sys/service/impl/UserServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mapper/sys/RoleMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/sys/RoleMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/system/user/userManager.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/system/user/userManager.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/houliu/sys/controller/MenuController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/houliu/sys/controller/MenuController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/houliu/sys/realm/UserRealm.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/houliu/sys/realm/UserRealm.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -83,25 +70,79 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/system/dept/deptRight.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="69">
+              <caret line="3" column="26" lean-forward="true" selection-start-line="3" selection-start-column="26" selection-end-line="3" selection-end-column="26" />
+              <folding>
+                <element signature="n#style#0;n#fieldset#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#fieldset#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#blockquote#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#style#0;n#div#0;n#div#1;n#form#0;n#blockquote#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#6;n#form#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/houliu/sys/controller/UserController.java">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/system/loginfo/loginfoManager.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="807">
-              <caret line="224" column="17" lean-forward="true" selection-start-line="224" selection-start-column="17" selection-end-line="224" selection-end-column="17" />
+            <state relative-caret-position="424">
+              <caret line="68" column="75" selection-start-line="68" selection-start-column="75" selection-end-line="68" selection-end-column="75" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/system/menu/menuRight.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="23">
+              <caret line="1" column="35" selection-start-line="1" selection-start-column="35" selection-end-line="1" selection-end-column="35" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#4878#4879#0" expanded="true" />
-                <element signature="e#4918#4919#0" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/houliu/sys/service/IUserService.java">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/system/permission/permissionRight.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="276">
-              <caret line="12" column="50" lean-forward="true" selection-start-line="12" selection-start-column="50" selection-end-line="12" selection-end-column="50" />
+            <state relative-caret-position="23">
+              <caret line="1" column="92" selection-start-line="1" selection-start-column="6" selection-end-line="1" selection-end-column="92" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/system/role/roleManager.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="375">
+              <caret line="71" column="101" selection-start-line="71" selection-start-column="101" selection-end-line="71" selection-end-column="101" />
+              <folding>
+                <element signature="n#fieldset#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#blockquote#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#style#0;n#div#0;n#div#1;n#form#0;n#blockquote#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#div#1;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#style#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/houliu/sys/controller/MenuController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="96">
+              <caret line="45" column="37" selection-start-line="45" selection-start-column="37" selection-end-line="45" selection-end-column="37" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -110,19 +151,27 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/houliu/sys/service/impl/UserServiceImpl.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/houliu/sys/realm/UserRealm.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="281">
-              <caret line="57" column="43" lean-forward="true" selection-start-line="57" selection-start-column="43" selection-end-line="57" selection-end-column="43" />
+            <state relative-caret-position="200">
+              <caret line="82" column="48" lean-forward="true" selection-start-line="82" selection-start-column="48" selection-end-line="82" selection-end-column="48" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#986#987#0" expanded="true" />
+                <element signature="e#1040#1041#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/houliu/sys/mapper/RoleMapper.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/houliu/sys/common/ActiverUser.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="576">
-              <caret line="36" column="17" selection-start-line="36" selection-start-column="17" selection-end-line="36" selection-end-column="17" />
+            <state relative-caret-position="437">
+              <caret line="19" column="15" selection-start-line="19" selection-start-column="15" selection-end-line="19" selection-end-column="15" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -137,53 +186,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/houliu/HouliuApplication.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="299">
-              <caret line="15" column="42" selection-start-line="15" selection-start-column="42" selection-end-line="15" selection-end-column="42" />
-              <folding>
-                <element signature="e#383#384#0" expanded="true" />
-                <element signature="e#450#451#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="64">
-              <caret line="166" column="21" selection-start-line="166" selection-start-column="21" selection-end-line="166" selection-end-column="21" />
-            </state>
-          </provider>
-          <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/houliu/sys/service/impl/DeptServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="346">
-              <caret line="26" column="5" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#694#695#0" expanded="true" />
-                <element signature="e#734#735#0" expanded="true" />
-                <element signature="e#791#792#0" expanded="true" />
-                <element signature="e#838#839#0" expanded="true" />
-                <element signature="e#902#903#0" expanded="true" />
-                <element signature="e#945#946#0" expanded="true" />
-                <element signature="e#999#1000#0" expanded="true" />
-                <element signature="e#1040#1041#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/templates/system/user/userManager.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-133">
-              <caret line="448" column="69" selection-start-line="448" selection-start-column="69" selection-end-line="448" selection-end-column="69" />
+            <state relative-caret-position="735">
+              <caret line="72" column="89" selection-start-line="72" selection-start-column="89" selection-end-line="72" selection-end-column="89" />
               <folding>
                 <element signature="n#fieldset#0;n#body#0;n#html#0;n#!!top" />
                 <element signature="n#blockquote#0;n#body#0;n#html#0;n#!!top" />
@@ -240,7 +246,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/resources/templates/system/dept/deptLeft.html" />
         <option value="$PROJECT_DIR$/src/main/java/com/houliu/controller/DeptController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/houliu/service/impl/DeptServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/houliu/cache/CacheAspect.java" />
@@ -249,8 +254,6 @@
         <option value="$PROJECT_DIR$/src/main/resources/templates/system/menu/menuManager.html" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/system/menu/menuLeft.html" />
         <option value="$PROJECT_DIR$/src/main/resources/application.yml" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/system/menu/menuRight.html" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/system/dept/deptRight.html" />
         <option value="$PROJECT_DIR$/src/main/java/com/houliu/sys/mapper/PermissionMapper.java" />
         <option value="$PROJECT_DIR$/src/main/resources/mapper/sys/PermissionMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/mapper/sys/NoticeMapper.xml" />
@@ -259,24 +262,20 @@
         <option value="$PROJECT_DIR$/src/main/java/com/houliu/sys/service/impl/LoginfoServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/system/permission/permissionManager.html" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/system/permission/permissionLeft.html" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/system/permission/permissionRight.html" />
         <option value="$PROJECT_DIR$/src/main/java/com/houliu/sys/entity/Role.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/houliu/sys/vo/RoleVo.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/system/role/noticeManager.html" />
         <option value="$PROJECT_DIR$/src/main/java/com/houliu/sys/controller/PermissionController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/houliu/sys/common/TreeNode.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/system/role/roleManager.html" />
         <option value="$PROJECT_DIR$/src/main/java/com/houliu/sys/entity/User.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/houliu/sys/service/impl/User.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/houliu/sys/common/ActiverUser.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/houliu/sys/mapper/UserMapper.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/houliu/sys/vo/UserVo.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/houliu/sys/controller/MenuController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/houliu/sys/controller/LoginController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/houliu/sys/controller/NoticeController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/houliu/sys/controller/SystemController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/houliu/sys/service/impl/DeptServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/houliu/sys/realm/UserRealm.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/houliu/sys/common/PinyinUtils.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/houliu/sys/common/Constast.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/houliu/sys/common/DataGridView.java" />
@@ -290,7 +289,14 @@
         <option value="$PROJECT_DIR$/src/main/java/com/houliu/sys/controller/UserController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/houliu/sys/service/IUserService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/houliu/sys/service/impl/UserServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/houliu/sys/controller/MenuController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/system/dept/deptRight.html" />
+        <option value="$PROJECT_DIR$/src/main/java/com/houliu/sys/realm/UserRealm.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/system/menu/menuRight.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/system/permission/permissionRight.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/system/role/roleManager.html" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/system/user/userManager.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/system/loginfo/loginfoManager.html" />
       </list>
     </option>
   </component>
@@ -545,7 +551,67 @@
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
               <item name="system" type="462c0819:PsiDirectoryNode" />
+              <item name="dept" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ERP0520" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ERP0520" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="system" type="462c0819:PsiDirectoryNode" />
+              <item name="loginfo" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ERP0520" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ERP0520" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="system" type="462c0819:PsiDirectoryNode" />
+              <item name="menu" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ERP0520" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ERP0520" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="system" type="462c0819:PsiDirectoryNode" />
+              <item name="notice" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ERP0520" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ERP0520" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="system" type="462c0819:PsiDirectoryNode" />
+              <item name="permission" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ERP0520" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ERP0520" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="system" type="462c0819:PsiDirectoryNode" />
               <item name="role" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ERP0520" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ERP0520" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="system" type="462c0819:PsiDirectoryNode" />
+              <item name="user" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -563,7 +629,7 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1578334721143" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1578380867209" />
     <property name="ignore_missing_gitignore" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -670,7 +736,7 @@
       <option name="presentableId" value="Default" />
       <updated>1577636187710</updated>
       <workItem from="1577636192994" duration="67184000" />
-      <workItem from="1578042418116" duration="67217000" />
+      <workItem from="1578042418116" duration="72901000" />
     </task>
     <servers />
   </component>
@@ -689,7 +755,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="134401000" />
+    <option name="totallyTimeSpent" value="140085000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -710,7 +776,7 @@
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info id="Web" order="4" side_tool="true" />
       <window_info id="Designer" order="5" />
-      <window_info content_ui="combo" id="Project" order="6" weight="0.24391988" />
+      <window_info active="true" content_ui="combo" id="Project" order="6" visible="true" weight="0.24391988" />
       <window_info id="Structure" order="7" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Spring" order="0" />
       <window_info anchor="bottom" id="Terminal" order="1" weight="0.32891566" />
@@ -725,7 +791,7 @@
       <window_info anchor="bottom" id="FindBugs-IDEA" order="10" />
       <window_info anchor="bottom" id="Message" order="11" />
       <window_info anchor="bottom" id="Find" order="12" weight="0.32891566" />
-      <window_info anchor="bottom" id="Run" order="13" weight="0.3293124" />
+      <window_info anchor="bottom" id="Run" order="13" weight="0.32891566" />
       <window_info anchor="bottom" id="Debug" order="14" weight="0.30639324" />
       <window_info anchor="bottom" id="Cvs" order="15" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="16" weight="0.4" />
@@ -767,7 +833,7 @@
       <window_info anchor="bottom" id="FindBugs-IDEA" order="10" />
       <window_info anchor="bottom" id="Message" order="11" />
       <window_info anchor="bottom" id="Find" order="12" weight="0.32891566" />
-      <window_info anchor="bottom" id="Run" order="13" weight="0.3305187" />
+      <window_info anchor="bottom" id="Run" order="13" weight="0.3293124" />
       <window_info anchor="bottom" id="Debug" order="14" weight="0.30639324" />
       <window_info anchor="bottom" id="Cvs" order="15" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="16" weight="0.4" />
@@ -792,27 +858,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/system/permission/permissionLeft.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="392">
-          <caret line="41" column="31" lean-forward="true" selection-start-line="41" selection-start-column="31" selection-end-line="41" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/system/permission/permissionManager.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/houliu/sys/entity/Role.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="382">
-          <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/houliu/sys/vo/NoticeVo.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="575">
@@ -840,28 +885,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/system/menu/menuRight.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="12" column="39" lean-forward="true" selection-start-line="12" selection-start-column="39" selection-end-line="12" selection-end-column="39" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/system/menu/menuLeft.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="293">
           <caret line="29" column="23" lean-forward="true" selection-start-line="29" selection-start-column="23" selection-end-line="29" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/system/permission/permissionRight.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2058">
-          <caret line="252" column="37" selection-start-line="252" selection-start-column="28" selection-end-line="252" selection-end-column="37" />
         </state>
       </provider>
     </entry>
@@ -884,16 +911,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/houliu/sys/service/impl/User.java">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/houliu/sys/common/ActiverUser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="19" column="15" selection-start-line="19" selection-start-column="15" selection-end-line="19" selection-end-column="15" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/houliu/sys/mapper/UserMapper.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -964,31 +981,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/houliu/sys/controller/MenuController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="735">
-          <caret line="43" column="24" selection-start-line="43" selection-start-column="24" selection-end-line="43" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/static/resources/layui_ext/dtree/dtree.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-2015" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/houliu/sys/realm/UserRealm.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="41" column="56" selection-start-line="41" selection-start-column="56" selection-end-line="41" selection-end-column="56" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#873#874#0" expanded="true" />
-            <element signature="e#927#928#0" expanded="true" />
-          </folding>
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/houliu/sys/controller/DeptController.java">
@@ -1175,33 +1170,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/sys/RoleMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="618">
-          <caret line="33" column="67" selection-start-line="33" selection-start-column="67" selection-end-line="33" selection-end-column="67" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/system/role/roleManager.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="277">
-          <caret line="253" column="48" selection-start-line="253" selection-start-column="48" selection-end-line="253" selection-end-column="48" />
-          <folding>
-            <element signature="n#fieldset#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#blockquote#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#style#0;n#div#0;n#div#1;n#form#0;n#blockquote#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#div#1;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#style#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/houliu/sys/service/IUserService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="276">
-          <caret line="12" column="50" lean-forward="true" selection-start-line="12" selection-start-column="50" selection-end-line="12" selection-end-column="50" />
+          <caret line="12" column="50" selection-start-line="12" selection-start-column="50" selection-end-line="12" selection-end-column="50" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1218,7 +1190,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/com/houliu/sys/service/impl/UserServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="281">
-          <caret line="57" column="43" lean-forward="true" selection-start-line="57" selection-start-column="43" selection-end-line="57" selection-end-column="43" />
+          <caret line="57" column="43" selection-start-line="57" selection-start-column="43" selection-end-line="57" selection-end-column="43" />
         </state>
       </provider>
     </entry>
@@ -1240,10 +1212,102 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/houliu/sys/controller/UserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="194" column="41" selection-start-line="194" selection-start-column="41" selection-end-line="194" selection-end-column="41" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#4878#4879#0" expanded="true" />
+            <element signature="e#4918#4919#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/sys/RoleMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="618">
+          <caret line="33" column="67" selection-start-line="33" selection-start-column="67" selection-end-line="33" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/houliu/sys/config/ShiroAutoConfiguration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-64">
+          <caret line="33" column="13" selection-start-line="33" selection-start-column="13" selection-end-line="33" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/houliu/sys/common/ActiverUser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="19" column="15" selection-start-line="19" selection-start-column="15" selection-end-line="19" selection-end-column="15" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/houliu/sys/realm/UserRealm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="82" column="48" lean-forward="true" selection-start-line="82" selection-start-column="48" selection-end-line="82" selection-end-column="48" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#986#987#0" expanded="true" />
+            <element signature="e#1040#1041#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/houliu/sys/controller/MenuController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="45" column="37" selection-start-line="45" selection-start-column="37" selection-end-line="45" selection-end-column="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/system/menu/menuRight.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="23">
+          <caret line="1" column="35" selection-start-line="1" selection-start-column="35" selection-end-line="1" selection-end-column="35" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/system/role/roleManager.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="71" column="101" selection-start-line="71" selection-start-column="101" selection-end-line="71" selection-end-column="101" />
+          <folding>
+            <element signature="n#fieldset#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#blockquote#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#form#0;n#blockquote#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#div#1;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#style#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/system/permission/permissionRight.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="23">
+          <caret line="1" column="92" selection-start-line="1" selection-start-column="6" selection-end-line="1" selection-end-column="92" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/system/user/userManager.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-133">
-          <caret line="448" column="69" selection-start-line="448" selection-start-column="69" selection-end-line="448" selection-end-column="69" />
+        <state relative-caret-position="735">
+          <caret line="72" column="89" selection-start-line="72" selection-start-column="89" selection-end-line="72" selection-end-column="89" />
           <folding>
             <element signature="n#fieldset#0;n#body#0;n#html#0;n#!!top" />
             <element signature="n#blockquote#0;n#body#0;n#html#0;n#!!top" />
@@ -1254,15 +1318,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/houliu/sys/controller/UserController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/system/dept/deptRight.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="807">
-          <caret line="224" column="17" lean-forward="true" selection-start-line="224" selection-start-column="17" selection-end-line="224" selection-end-column="17" />
+        <state relative-caret-position="69">
+          <caret line="3" column="26" lean-forward="true" selection-start-line="3" selection-start-column="26" selection-end-line="3" selection-end-column="26" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#4878#4879#0" expanded="true" />
-            <element signature="e#4918#4919#0" expanded="true" />
+            <element signature="n#style#0;n#fieldset#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#fieldset#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#blockquote#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#form#0;n#blockquote#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#6;n#form#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/system/loginfo/loginfoManager.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="424">
+          <caret line="68" column="75" selection-start-line="68" selection-start-column="75" selection-end-line="68" selection-end-column="75" />
         </state>
       </provider>
     </entry>

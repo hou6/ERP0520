@@ -7,16 +7,14 @@ import com.houliu.sys.common.*;
 import com.houliu.sys.entity.Permission;
 import com.houliu.sys.entity.User;
 import com.houliu.sys.service.IPermissionService;
+import com.houliu.sys.service.IRoleService;
 import com.houliu.sys.vo.PermissionVo;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 /**
  * @author houliu
@@ -31,6 +29,8 @@ public class MenuController {
 
     @Autowired
     private IPermissionService permissionService;
+    @Autowired
+    private IRoleService roleService;
 
     @RequestMapping("loadIndexLeftMenuJson")
     public DataGridView loadIndexLeftMenuJson(PermissionVo permissionVo){
@@ -43,17 +43,33 @@ public class MenuController {
         //拿出session中的user
         User user = (User) WebUtils.getSession().getAttribute("user");
 
-        List<Permission> permissionList = null;
+        List<Permission> list = null;
         //如果是超级管理员
         if (user.getType() == Constast.USER_TYPE_SUPER) {
-            permissionList = permissionService.list(queryWrapper);
+            list = permissionService.list(queryWrapper);
         }else {
             //根据用户ID+角色+权限去查
-            permissionList = permissionService.list(queryWrapper);  //TODO  待完成
+            Integer userId = user.getId();
+            //通过用户的id查询用户的rid
+            List<Integer> currentUserRoleIds = roleService.queryUserRoleIdsByUid(userId);
+            //通过用户的rids查询用户的pid
+            Set<Integer> pids = new HashSet<>();     ////使用set去重
+            for (Integer rid : currentUserRoleIds) {
+                List<Integer> permissionIds = roleService.queryRolePermissionIdsByRid(rid);
+                pids.addAll(permissionIds);
+            }
+            //通过用户的pid查询用户的权限
+            if (pids.size() > 0){
+                queryWrapper.in("id",pids);
+                list = permissionService.list(queryWrapper);
+            }else {
+                list = new ArrayList<>();
+            }
+
         }
 
         List<TreeNode> treeNodes = new ArrayList<>();
-        for (Permission permission : permissionList) {
+        for (Permission permission : list) {
             Integer id = permission.getId();
             Integer pid = permission.getPid();
             String title = permission.getTitle();
