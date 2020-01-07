@@ -115,7 +115,7 @@
             <div class="layui-inline">
                 <label class="layui-form-label">用户姓名</label>
                 <div class="layui-input-inline">
-                    <input type="text" name="name" autocomplete="off" lay-verity="required" placeholder="请输入用户姓名" class="layui-input">
+                    <input type="text" name="name" id="username" autocomplete="off" lay-verity="required" placeholder="请输入用户姓名" class="layui-input">
                 </div>
             </div>
             <div class="layui-inline">
@@ -165,6 +165,12 @@
     </form>
 </div>
 <!--添加和修改的弹出层结束-->
+
+<!--用户分配角色弹出层开始-->
+<div style="display: none; padding: 5px" id="selectUserRoleDiv">
+    <table class="layui-hide" id="roleTable" lay-filter="roleTable"></table>
+</div>
+<!--用户分配角色弹出层结束-->
 
 
 <script type="text/javascript" src="/resources/layui/layui.js"></script>
@@ -255,6 +261,12 @@
                 case 'delete':
                     deleteUser(data);
                     break;
+                case 'resetPwd':
+                    resetPwd(data);
+                    break;
+                case 'selectRole':
+                    selectRole(data);
+                    break;
             }
         });
 
@@ -291,44 +303,65 @@
                 title:'修改用户',
                 success:function () {
                     $("#dataFrm")[0].reset();
+                    $("#deptid").val("");
                     //装载新的数据
                     form.val("dataFrm",data);
-                    //选中之前的父级用户
-                    dtree.dataInit("userTree", data.pid);
-                    // 也可以在这里指定，第二个参数如果不填，则会自动返显当前选中的数据
-                    var selectParam = dtree.selectVal("userTree");
+                    //选中之前的所属部门
+                    dtree.dataInit("deptTree", data.deptid);
+                    dtree.selectVal("deptTree");
+                    //选中领导部门
+                    var leaderid = data.mgr;
+                    $.get("/user/loadUserById",{id:leaderid},function (res) {
+                        var d = res.data;
+                        dtree.dataInit("leaderdeptTree", d.deptid);
+                        dtree.selectVal("leaderdeptTree");
+                        $.get("/user/loadUsersByDeptId",{deptid:d.deptid},function (res) {
+                            var users = res.data;
+                            var dom_mgr = $("#mgr");
+                            var html = "<option value='0'>请选择直属领导</option>";
+                            $.each(users,function (index, item) {
+                                html += "<option value='"+item.id+"'>" + item.name + "</option>";
+                            });
+                            dom_mgr.html(html);
+                            //选中一个
+                            dom_mgr.val(leaderid);
+                            //重新渲染
+                            form.render("select");
+                        })
+                    });
                     url="/user/updateUser";
                 }
             });
         }
 
-        $("#doSubmit").click(function () {
-            //同步富文本和textarea里面的内容
-            var data = $("#dataFrm").serialize();
-            $.post(url,data,function (res) {
+        form.on("submit(doSubmit)",function (data) {
+            $.post(url,data.field,function (res) {
                 if (res.code == 200){
                     tableIns.reload();
-                    //刷新下拉树
-                    selectTree.reload();
-                    //刷新左边的下拉框
-                    window.parent.left.userTree.reload();
                 }
                 layer.msg(res.msg);
                 layer.close(mainIndex);
             });
+            return false;
         });
 
         //删除
         function deleteUser(data) {
-            layer.confirm('确定要删除['+ data.title +']吗?', {icon: 3, title:'提示'}, function(index){
+            layer.confirm('确定要删除['+ data.name +']吗?', {icon: 3, title:'提示'}, function(index){
                 $.post("/user/deleteUser",{id:data.id},function (res) {
                     if (res.code == 200){
                         tableIns.reload();
-                        //刷新下拉树
-                        selectTree.reload();
-                        //刷新左边的下拉框
-                        window.parent.left.userTree.reload();
                     }
+                    layer.msg(res.msg);
+                });
+                layer.close(index);
+            });
+        }
+
+        //重置密码
+        function resetPwd(data) {
+            layer.confirm('确定要重置['+ data.name +']这个用户的密码吗?', {icon: 3, title:'提示'}, function(index){
+                $.post("/user/resetPwd",{id:data.id},function (res) {
                     layer.msg(res.msg);
                 });
                 layer.close(index);
@@ -395,6 +428,59 @@
                 form.render("select");
             })
         });
+
+        //监听用户名失去焦点事件
+        $("#username").on("blur",function () {
+            var username = $(this).val();
+            $.get("/user/changeChineseToPinyin",{username:username},function (res) {
+                $("#loginname").val(res.value);
+            })
+        });
+
+        //打开分配角色的弹出层
+        function selectRole(data) {
+            mainIndex = layer.open({
+                type:1,
+                content:$("#selectUserRoleDiv"),
+                area:['800px','600px'],
+                title:'分配【' + data.name + '】的权限',
+                btn: ['<span class="layui-icon">&#xe605;确认分配</span>', '<span class="layui-icon">&#x1006;取消分配</span>'],
+                yes: function(index, layero){
+                    var checkStatus = table.checkStatus('roleTable');
+                    var params = "uid=" + data.id;
+                    $.each(checkStatus.data,function (index, item) {
+                        params += "&ids=" + item.id;
+                    });
+                    $.post("/user/saveUserRole",params,function (res) {
+                        layer.msg(res.msg);
+                    });
+                },
+                btn2: function(index, layero){
+                    //return false 开启该代码可禁止点击该按钮关闭
+                },
+                btnAlign: 'c',  //按钮居中
+                success:function () {
+                    initRoleTable(data);
+                }
+            });
+        }
+        var roleTableIns;
+        //初始化角色列表
+        function initRoleTable(data) {
+            roleTableIns = table.render({
+                elem: '#roleTable'
+                ,url:'/user/initRoleByUserId'
+                ,where:{
+                    id:data.id
+                }
+                ,cols: [ [
+                    {type:'checkbox',align:'center'}
+                    ,{field:'id', title:'ID',align:'center'}
+                    ,{field:'name', title:'角色名称',align:'center'}
+                    ,{field:'remark', title:'角色备注',align:'center'}
+                ] ]
+            });
+        }
 
     });
 

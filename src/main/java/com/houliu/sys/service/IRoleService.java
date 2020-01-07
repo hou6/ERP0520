@@ -28,4 +28,11 @@ public interface IRoleService extends IService<Role> {
      * @param ids
      */
     void saveRolePermission(Integer rid, Integer[] ids);
+
+    /**
+     * 询当前用户所拥有的角色id
+     * @param id
+     * @return
+     */
+    List<Integer> queryUserRoleIdsByUid(Integer id);
 }

@@ -2,8 +2,6 @@ package com.houliu.sys.cache;
 
 import com.houliu.sys.entity.Dept;
 import com.houliu.sys.entity.User;
-import com.houliu.sys.vo.DeptVo;
-import com.houliu.sys.vo.UserVo;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.aspectj.lang.ProceedingJoinPoint;
@@ -78,7 +76,7 @@ public class CacheAspect {
     @Around(value = POINTCUT_DEPT_UPDATE)
     public Object cacheDeptUpdate(ProceedingJoinPoint joinPoint) throws Throwable {
         //取出第一个参数
-        DeptVo deptVo = (DeptVo) joinPoint.getArgs()[0];
+        Dept deptVo = (Dept) joinPoint.getArgs()[0];
         Boolean isSuccess = (Boolean) joinPoint.proceed();
         if (isSuccess){
             Dept dept = (Dept) CACHE_CONTAINER.get(CACHE_DEPT_PREFIX + deptVo.getId());  //从缓存中取
@@ -159,7 +157,7 @@ public class CacheAspect {
     @Around(value = POINTCUT_USER_UPDATE)
     public Object cacheUserUpdate(ProceedingJoinPoint joinPoint) throws Throwable {
         //取出第一个参数
-        UserVo userVo = (UserVo) joinPoint.getArgs()[0];
+        User userVo = (User) joinPoint.getArgs()[0];
         Boolean isSuccess = (Boolean) joinPoint.proceed();
         if (isSuccess){
             User user = (User) CACHE_CONTAINER.get(CACHE_USER_PREFIX + userVo.getId());  //从缓存中取

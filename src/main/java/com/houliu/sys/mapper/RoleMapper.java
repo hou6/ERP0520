@@ -29,4 +29,10 @@ public interface RoleMapper extends BaseMapper<Role> {
 
     //保存菜单权限和角色之间的关系
     void saveRolePermission(@Param("rid") Integer rid, @Param("pid") Integer pid);
+
+    void deleteRoleUserByUid(@Param("id") Serializable id);
+
+    List<Integer> queryUserRoleIdsByUid(@Param("id") Integer id);
+
+    void insertUserRole(@Param("uid") Integer uid, @Param("rid") Integer rid);
 }

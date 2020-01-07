@@ -48,7 +48,7 @@ public class RoleController {
     public DataGridView loadAllRole(RoleVo roleVo){
         IPage<Role> page = new Page<>(roleVo.getPage(),roleVo.getLimit());
         QueryWrapper<Role> queryWrapper = new QueryWrapper<>();
-        queryWrapper.like(StringUtils.isNotBlank(roleVo.getName()),"remark",roleVo.getName());
+        queryWrapper.like(StringUtils.isNotBlank(roleVo.getName()),"name",roleVo.getName());
         queryWrapper.like(StringUtils.isNotBlank(roleVo.getRemark()),"remark",roleVo.getRemark());
         queryWrapper.eq(roleVo.getAvailable() != null,"available",roleVo.getAvailable());
         queryWrapper.orderByDesc("createtime");
