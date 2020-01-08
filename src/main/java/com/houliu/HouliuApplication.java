@@ -10,7 +10,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  */
 
 @SpringBootApplication
-@MapperScan("com.houliu.sys.mapper")
+@MapperScan("com.houliu.*.mapper")
 public class HouliuApplication {
 
     public static void main(String[] args) {

@@ -230,9 +230,9 @@ public class UserController {
     public ResultObj saveUserRole(Integer uid,Integer[] ids){
         try {
             userService.saveUserRole(uid,ids);
-            return ResultObj.ADD_OK;
+            return ResultObj.DISPATCH_OK;
         }catch (Exception e){
-            return ResultObj.ADD_ERROR;
+            return ResultObj.DISPATCH_ERROR;
         }
 
     }

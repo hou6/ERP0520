@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org" xmlns:shiro="http://www.pollix.at/thymeleaf/shiro">
 <head>
     <meta charset="UTF-8">
     <title>用户管理</title>
@@ -63,14 +63,14 @@
     <table class="layui-hide" id="userTable" lay-filter="userTable"></table>
 
     <div id="userToolBar" style="display: none;">
-        <button type="button" lay-event="add" class="layui-btn layui-btn-sm"><span class="layui-icon layui-icon-add-1"></span>添加用户</button>
+        <button type="button" lay-event="add" shiro:hasPermission="user:create" class="layui-btn layui-btn-sm"><span class="layui-icon layui-icon-add-1"></span>添加用户</button>
     </div>
 
     <div id="userRowBar" style="display: none;">
-        <button type="button" lay-event="update" class="layui-btn layui-btn-sm"><span class="layui-icon layui-icon-edit"></span>修改</button>
-        <button type="button" lay-event="delete" class="layui-btn layui-btn-sm layui-btn-danger"><span class="layui-icon layui-icon-delete"></span>删除</button>
-        <button type="button" lay-event="resetPwd" class="layui-btn layui-btn-sm"><span class="layui-icon layui-icon-edit"></span>重置密码</button>
-        <button type="button" lay-event="selectRole" class="layui-btn layui-btn-sm layui-btn-danger"><span class="layui-icon layui-icon-delete"></span>分配角色</button>
+        <button type="button" lay-event="update" shiro:hasPermission="user:update" class="layui-btn layui-btn-sm"><span class="layui-icon layui-icon-edit"></span>修改</button>
+        <button type="button" lay-event="delete" shiro:hasPermission="user:delete" class="layui-btn layui-btn-sm layui-btn-danger"><span class="layui-icon layui-icon-delete"></span>删除</button>
+        <button type="button" lay-event="resetPwd" shiro:hasPermission="user:resetPwd" class="layui-btn layui-btn-sm"><span class="layui-icon layui-icon-edit"></span>重置密码</button>
+        <button type="button" lay-event="selectRole" shiro:hasPermission="user:selectRole" class="layui-btn layui-btn-sm layui-btn-danger"><span class="layui-icon layui-icon-delete"></span>分配角色</button>
     </div>
 </div>
 
