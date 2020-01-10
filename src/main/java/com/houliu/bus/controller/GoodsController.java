@@ -97,9 +97,7 @@ public class GoodsController {
                     goodsVo.setGoodsimg(newName);
                     //删除原先的图片
                     String oldPath = goodsService.getById(goodsVo.getId()).getGoodsimg();
-                    if (!oldPath.equals(Constast.DEFAULT_IMG)){
-                        AppFileUtils.removeFileByPath(oldPath);
-                    }
+                    AppFileUtils.removeFileByPath(oldPath);
                 }
             }
             this.goodsService.updateById(goodsVo);
@@ -115,8 +113,10 @@ public class GoodsController {
      * @return
      */
     @RequestMapping("deleteGoods")
-    public ResultObj deleteGoods(Integer id){
+    public ResultObj deleteGoods(Integer id,String goodsimg){
         try {
+            //删除原文件
+            AppFileUtils.removeFileByPath(goodsimg);
             this.goodsService.removeById(id);
             return ResultObj.DELETE_OK;
         } catch (Exception e) {

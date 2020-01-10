@@ -384,7 +384,7 @@
         //删除
         function deleteGoods(data) {
             layer.confirm('确定要删除['+ data.goodsname +']吗?', {icon: 3, title:'提示'}, function(index) {
-                $.post("/goods/deleteGoods", {id: data.id}, function (res) {
+                $.post("/goods/deleteGoods", {id: data.id,goodsimg:data.goodsimg}, function (res) {
                     if (res.code == 200) {
                         tableIns.reload();
                     }
