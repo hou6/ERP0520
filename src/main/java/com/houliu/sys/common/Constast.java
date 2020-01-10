@@ -41,4 +41,9 @@ public class Constast {
      */
     public static final String USER_DEFAULT_PWD = "123456";
 
+    /**
+     * 商品默认图片
+     */
+    public static final String DEFAULT_IMG= "/images/defaultImage.jpg";
+
 }

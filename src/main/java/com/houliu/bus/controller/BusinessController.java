@@ -30,4 +30,12 @@ public class BusinessController {
         return "/business/provider/providerManager";
     }
 
+    /**
+     * 跳转到商品管理
+     */
+    @RequestMapping("toGoodsManager")
+    public String toGoodsManager(){
+        return "/business/goods/goodsManager";
+    }
+
 }

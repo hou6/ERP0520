@@ -7,6 +7,7 @@ import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.houliu.bus.entity.Provider;
 import com.houliu.bus.service.IProviderService;
 import com.houliu.bus.vo.ProviderVo;
+import com.houliu.sys.common.Constast;
 import com.houliu.sys.common.DataGridView;
 import com.houliu.sys.common.ResultObj;
 import org.apache.commons.lang3.StringUtils;
@@ -110,6 +111,17 @@ public class ProviderController {
         } catch (Exception e) {
             return ResultObj.DELETE_ERROR;
         }
+    }
+
+    /**
+     * 加载所有可用的供应商
+     */
+    @RequestMapping("loadAllProviderForSelect")
+    public DataGridView loadAllProviderForSelect(){
+        QueryWrapper<Provider> queryWrapper = new QueryWrapper<>();
+        queryWrapper.eq("available", Constast.AVALIABLE_TRUE);
+        List<Provider> providerList = this.providerService.list(queryWrapper);
+        return new DataGridView(providerList);
     }
 
 }
