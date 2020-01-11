@@ -1,6 +1,7 @@
 package com.houliu.bus.cache;
 
 import com.houliu.bus.entity.Customer;
+import com.houliu.bus.entity.Goods;
 import com.houliu.bus.entity.Provider;
 import com.houliu.sys.cache.CacheAspect;
 import org.apache.commons.logging.Log;
@@ -164,26 +165,26 @@ public class BusinessCacheAspect {
         }
         return res;
     }
-    /**
-     * 查询切入
-     */
-    @Around(value = POINTCUT_PROVIDER_GET)
-    public Object cacheProviderGet(ProceedingJoinPoint joinPoint) throws Throwable {
-        //取出第一个参数
-        Integer id = (Integer) joinPoint.getArgs()[0];
-        //从缓存里面取
-        Object res1 = CACHE_CONTAINER.get(CACHE_PROVIDER_PREFIX + id);
-        if (res1 != null){
-            log.info("从缓存中得到数据：" + CACHE_PROVIDER_PREFIX + id);
-            return res1;
-        }else {
-            Provider res2 = (Provider) joinPoint.proceed();
-            //放入缓存
-            CACHE_CONTAINER.put(CACHE_PROVIDER_PREFIX + res2.getId(),res2);
-            log.info("从缓存中未得到数据，将从数据库查询，并放入缓存："+ CACHE_PROVIDER_PREFIX + res2.getId());
-            return res2;
-        }
-    }
+//    /**
+//     * 查询切入
+//     */
+//    @Around(value = POINTCUT_PROVIDER_GET)
+//    public Object cacheProviderGet(ProceedingJoinPoint joinPoint) throws Throwable {
+//        //取出第一个参数
+//        Integer id = (Integer) joinPoint.getArgs()[0];
+//        //从缓存里面取
+//        Object res1 = CACHE_CONTAINER.get(CACHE_PROVIDER_PREFIX + id);
+//        if (res1 != null){
+//            log.info("从缓存中得到数据：" + CACHE_PROVIDER_PREFIX + id);
+//            return res1;
+//        }else {
+//            Provider res2 = (Provider) joinPoint.proceed();
+//            //放入缓存
+//            CACHE_CONTAINER.put(CACHE_PROVIDER_PREFIX + res2.getId(),res2);
+//            log.info("从缓存中未得到数据，将从数据库查询，并放入缓存："+ CACHE_PROVIDER_PREFIX + res2.getId());
+//            return res2;
+//        }
+//    }
 
     /**
      * 更新切入
@@ -236,6 +237,90 @@ public class BusinessCacheAspect {
                 CACHE_CONTAINER.remove(CACHE_PROVIDER_PREFIX+id);
                 log.info("供应商对象缓存已删除"+ CACHE_PROVIDER_PREFIX+id);
             }
+        }
+        return isSuccess;
+    }
+
+
+    //=========================================================================
+
+    /**
+     * 商品缓存的切面表达式
+     */
+    private static final String POINTCUT_GOODS_GET = "execution(* com.houliu.bus.service.impl.GoodsServiceImpl.getById(..))";
+    private static final String POINTCUT_GOODS_SAVE= "execution(* com.houliu.bus.service.impl.GoodsServiceImpl.save(..))";
+    private static final String POINTCUT_GOODS_UPDATE = "execution(* com.houliu.bus.service.impl.GoodsServiceImpl.updateById(..))";
+    private static final String POINTCUT_GOODS_DELETE = "execution(* com.houliu.bus.service.impl.GoodsServiceImpl.removeById(..))";
+
+    private static final String CACHE_GOODS_PREFIX = "goods:";
+
+    /**
+     * 添加切入
+     */
+    @Around(value = POINTCUT_GOODS_SAVE)
+    public Object cacheGoodsAdd(ProceedingJoinPoint joinPoint) throws Throwable {
+        //取出第一个参数
+        Goods goods = (Goods) joinPoint.getArgs()[0];
+        Boolean res = (Boolean) joinPoint.proceed();  //执行目标方法，去保存
+        if (res){
+            CACHE_CONTAINER.put(CACHE_GOODS_PREFIX+goods.getId(),goods);
+        }
+        return res;
+    }
+    /**
+     * 查询切入
+     */
+    @Around(value = POINTCUT_GOODS_GET)
+    public Object cacheGoodsGet(ProceedingJoinPoint joinPoint) throws Throwable {
+        //取出第一个参数
+        Integer id = (Integer) joinPoint.getArgs()[0];
+        //从缓存里面取
+        Object res1 = CACHE_CONTAINER.get(CACHE_GOODS_PREFIX + id);
+        if (res1 != null){
+            log.info("从缓存中得到数据：" + CACHE_GOODS_PREFIX + id);
+            return res1;
+        }else {
+            log.info("从缓存中未得到数据，将从数据库查询，并放入缓存：");
+            Goods res2 = (Goods) joinPoint.proceed();   //执行目标方法，去查
+            //放入缓存
+            CACHE_CONTAINER.put(CACHE_GOODS_PREFIX + res2.getId(),res2);
+            return res2;
+        }
+    }
+
+    /**
+     * 更新切入
+     */
+    @Around(value = POINTCUT_GOODS_UPDATE)
+    public Object cacheGoodsUpdate(ProceedingJoinPoint joinPoint) throws Throwable {
+        //取出第一个参数
+        Goods goodsVo = (Goods) joinPoint.getArgs()[0];
+        Boolean isSuccess = (Boolean) joinPoint.proceed();  //执行目标方法，去更新
+        if (isSuccess){
+            Goods goods = (Goods) CACHE_CONTAINER.get(CACHE_GOODS_PREFIX + goodsVo.getId());  //从缓存中取
+            if (null == goods){
+                goods = new Goods();
+                BeanUtils.copyProperties(goodsVo,goods);  //更新缓存
+                log.info("商品对象缓存已更新"+ CACHE_GOODS_PREFIX + goodsVo.getId());
+                CACHE_CONTAINER.put(CACHE_GOODS_PREFIX + goods.getId(),goods);
+            }
+        }
+        return isSuccess;
+    }
+
+
+    /**
+     * 删除切入
+     */
+    @Around(value = POINTCUT_GOODS_DELETE)
+    public Object cacheGoodsDelete(ProceedingJoinPoint joinPoint) throws Throwable {
+        //取出第一个参数
+        Integer id = (Integer) joinPoint.getArgs()[0];
+        Boolean isSuccess = (Boolean) joinPoint.proceed();   //执行目标方法，去删除
+        if (isSuccess){
+            //删除缓存
+            CACHE_CONTAINER.remove(CACHE_GOODS_PREFIX+id);
+            log.info("商品对象缓存已删除"+ CACHE_GOODS_PREFIX+id);
         }
         return isSuccess;
     }
