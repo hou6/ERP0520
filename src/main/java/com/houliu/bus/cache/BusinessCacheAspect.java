@@ -16,7 +16,6 @@ import org.springframework.stereotype.Component;
 import java.io.Serializable;
 import java.util.Collection;
 import java.util.Map;
-import java.util.concurrent.ConcurrentHashMap;
 
 /**
  * @author houliu
@@ -31,7 +30,7 @@ public class BusinessCacheAspect {
     private Log log = LogFactory.getLog(CacheAspect.class);
 
     //声明一个缓存容器
-    private static final Map<String,Object> CACHE_CONTAINER = new ConcurrentHashMap<>();
+    private static final Map<String,Object> CACHE_CONTAINER = CachePool.CACHE_CONTAINER;
 
     public static Map<String, Object> getCacheContainer() {
         return CACHE_CONTAINER;

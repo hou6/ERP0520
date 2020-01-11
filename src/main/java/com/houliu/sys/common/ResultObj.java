@@ -36,6 +36,8 @@ public class ResultObj {
     public static final ResultObj OPERATE_OK = new ResultObj(Constast.OK,"操作成功");
     public static final ResultObj OPERATE_ERROR = new ResultObj(Constast.ERROR,"操作失败");
 
+    public static final ResultObj SYNCCACHE_SUCCESS = new ResultObj(Constast.OK, "数据同步成功");
+
     private int code;
     private String msg;
 

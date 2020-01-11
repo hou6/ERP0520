@@ -34,7 +34,7 @@ public class Outport implements Serializable {
 
     private String paytype;
 
-    private Date outputtime;
+    private Date outporttime;
 
     private String operateperson;
 

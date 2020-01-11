@@ -1,5 +1,6 @@
 package com.houliu.sys.cache;
 
+import com.houliu.bus.cache.CachePool;
 import com.houliu.sys.entity.Dept;
 import com.houliu.sys.entity.User;
 import org.apache.commons.logging.Log;
@@ -12,7 +13,6 @@ import org.springframework.context.annotation.EnableAspectJAutoProxy;
 import org.springframework.stereotype.Component;
 
 import java.util.Map;
-import java.util.concurrent.ConcurrentHashMap;
 
 /**
  * @author houliu
@@ -23,7 +23,7 @@ import java.util.concurrent.ConcurrentHashMap;
 @EnableAspectJAutoProxy
 public class CacheAspect {
     //声明一个缓存容器
-    private static final Map<String,Object> CACHE_CONTAINER = new ConcurrentHashMap<>();
+    private static final Map<String,Object> CACHE_CONTAINER = CachePool.CACHE_CONTAINER;
     /**
      * 声明部门的切面表达式
      */
